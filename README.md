@@ -1,2 +1,2 @@
 # reminder
-multiple reminders in the browser
+To install, download zip and do "npm install" in the parent folder. Then "npm start".
