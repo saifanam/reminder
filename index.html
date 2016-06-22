@@ -1,0 +1,70 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div id="alarm-overlay">
+    <div id="overlay-text"></div>
+    <div id="overlay-closer">+</div>
+  </div>
+
+  <div id="content-box">
+
+    <div id="digital-clock"></div>
+
+    <div id="detail-box">
+
+      <div id="item-closer">+</div>
+      <div id="item-delete">
+        <img src="images/delete.png">
+      </div>
+      <div id="item-done">
+        <img src="images/done.png">
+      </div>
+
+      <div id="time-box">
+        <div class="section-head">Time</div>
+        <input id="time-hours" type="number" placeholder="hh" min="0" max="24">
+        <input id="time-minutes" type="number" placeholder="mm" min="0" max="60">
+      </div>
+
+      <div id="repeat-box">
+        <div class="section-head">Repeat</div>
+        <select onchange="app.getTextValue(this);">
+          <option value="once">Once</option>
+          <option value="hourly">Hourly</option>
+          <option value="daily">Daily</option>
+          <option value="weekly">Weekly</option>
+          <option value="monthly">Monthly</option>
+          <option value="yearly">Yearly</option>
+        </select>
+      </div>
+
+      <div id="label-box">
+        <div class="section-head">Label</div>
+        <input type="text" placeholder="Label">
+      </div>
+
+    </div> 
+
+    <div id="item-box"></div>
+
+    <div id="item-adder">+</div>
+
+
+  </div>
+
+  <script src="js/react.min.js"></script>
+  <script src="js/react-dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+  <script src="js/lockr.js"></script>
+  <script src="components/digital-clock.js" type="text/babel"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
